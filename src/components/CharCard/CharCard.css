@@ -1,0 +1,17 @@
+.card {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.img {
+    margin: 0 auto;
+    width: 250px;
+    height: 315px;
+  
+}
+
+.name {
+    text-align: center;
+}
