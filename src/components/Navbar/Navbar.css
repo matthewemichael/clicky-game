@@ -11,7 +11,7 @@
     margin: 0 0;
 }
 
-.navbar a {
+.navbar .brand {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -38,7 +38,7 @@
     font-weight: 900;
 }
 
-.score li{
+.score li {
     display: inline-block;
     padding: 26px 0;
     width: 33.3%;
@@ -48,18 +48,28 @@
     font-weight: 900;
 }
 
-@media screen and (max-width:500px) {
-    .navbar a {
-    
-    display:flex;
+@media screen and (max-width:600px) {
+  
+    .navbar {
+        height: 125px;
+    }
+    .navbar .brand {
+        display: flex;
+        width: 100%;
+        margin-bottom: -40px;
+        
     }
 
     .navbar li {
-        display:flex;
-    
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        line-height: normal;
+        margin-bottom: -40px;
     }
 
-    .score li{
-        display:flex;
+    .score li {
+        display: flex;
+        width: 100%;
     }
 }
