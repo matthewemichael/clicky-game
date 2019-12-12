@@ -16,7 +16,7 @@
     text-decoration: none;
     color: white;
     font-weight: 900;
-    width: 33.3%;
+    width: 20%
 }
 
 .navlist{
@@ -29,10 +29,15 @@
     margin: 0 0;
 }
 
+.navbar .message {
+    padding-right: 20px;
+    text-align-last: right;
+}
+
 .navbar li {
     display: inline-block;
     padding: 26px 0;
-    width: 33.3%;
+    width: 40%;
     text-align:center;
     color: white;
     font-weight: 900;
@@ -41,14 +46,14 @@
 .score li {
     display: inline-block;
     padding: 26px 0;
-    width: 33.3%;
-    text-align:end;
+    width: 40%;
+    text-align: end;
     justify-content: end;
     color: white;
     font-weight: 900;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:650px) {
   
     .navbar {
         height: 125px;

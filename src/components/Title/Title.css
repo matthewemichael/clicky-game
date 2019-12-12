@@ -1,0 +1,11 @@
+img {
+    margin-top: 100px;
+    max-width: 300px;
+    height: auto;
+}
+
+@media only screen and (max-width: 650px) {
+    img {
+        margin-top: 140px;
+    }
+}

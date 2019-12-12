@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Container from "./components/Container";
 import Navbar from "./components/Navbar";
+import Title from "./components/Title";
 import CharCard from "./components/CharCard";
 import Jumbotron from "./components/Jumbotron";
 import characters from "./characters.json";
@@ -10,9 +11,10 @@ class App extends Component {
   // Setting this.state.images to the images json array
   state = {
     characters,
-    count:0,
-    topScore:0,
-    initialState : [0,0,0,0,0,0,0,0,0,0,0,0]    
+    count: 0,
+    topScore: 0,
+    initialState: [0,0,0,0,0,0,0,0,0,0,0,0],
+    message: "Click on a character to start!"
   };
   
 
@@ -24,6 +26,9 @@ class App extends Component {
     this.countIncrement(id);
     this.shuffle(characters);
     this.setState({ characters });
+    this.setState({
+      message: "Don't click the same character twice!"
+    });
   };
 
   countIncrement = id => {
@@ -40,6 +45,10 @@ class App extends Component {
           else {
             this.setState({ count: 0 });
             this.setState({ initialState: [0,0,0,0,0,0,0,0,0,0,0,0] });
+            this.setState({
+              isPlaying: false,
+              message: "Click on a character to start!"
+            });
             return item;
           }
         } else {
@@ -56,7 +65,8 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Navbar count={this.state.count} topScore={this.state.topScore}/>
+        <Navbar message={this.state.message} count={this.state.count} topScore={this.state.topScore}/>
+        <Title />
         <Jumbotron >
         {this.state.characters.map(char => (
           <CharCard
@@ -69,8 +79,6 @@ class App extends Component {
         ))}
         </Jumbotron>
       </Container>
-
-
     )
   }
 }
