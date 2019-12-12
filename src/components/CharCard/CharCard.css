@@ -5,11 +5,16 @@
     display: inline-block;
 }
 
+.card-body {
+    padding-bottom: 0px !important;
+    
+}
 .img {
     margin: 0 auto;
     width: 250px;
-    height: 315px;
-  
+    height: 270px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .name {

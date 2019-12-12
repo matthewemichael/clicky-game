@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Wrapper from "./components/Wrapper";
+import Container from "./components/Container";
 import CharCard from "./components/CharCard";
 import characters from "./characters.json";
 import './App.css';
@@ -12,15 +12,15 @@ class App extends Component {
 
   render() {
     return (
-      <Wrapper>
+      <Container>
         {this.state.characters.map(char => (
           <CharCard
-            id={char.id}
+            key={char.id}
             name={char.name}
             image={char.image}
           />
         ))}
-      </Wrapper>
+      </Container>
 
 
     )

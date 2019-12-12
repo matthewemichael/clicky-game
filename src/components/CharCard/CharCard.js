@@ -2,7 +2,7 @@ import React from "react";
 import "./CharCard.css";
 
 const CharCard = ({ id, name, image }) => (
-    <div className="card">
+    <div className="card h-100">
         <div
             className="card-img-top img"
             key={id}
@@ -10,7 +10,7 @@ const CharCard = ({ id, name, image }) => (
         >
         </div>
         <div className="card-body">
-            <h3 className="name">{name}</h3>
+            <pre className="name">{name}</pre>
         </div>
     </div>
 )
