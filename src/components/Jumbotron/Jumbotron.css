@@ -1,0 +1,11 @@
+.jumbotron {
+    width: fit-content;
+    height: fit-content;
+    margin :0 10%;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: white;
+    padding: 0 0;
+}

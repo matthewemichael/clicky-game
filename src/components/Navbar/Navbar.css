@@ -1,0 +1,65 @@
+.navbar {
+    position:fixed;
+    width: 100%;
+    position:top;
+    min-height: 70px;
+    background-color:rgb(68, 68, 75);
+    z-index: 99;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    width: 33.3%;
+}
+
+.navlist{
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.brand{
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 26px 0;
+    width: 33.3%;
+    text-align:center;
+    color: white;
+    font-weight: 900;
+}
+
+.score li{
+    display: inline-block;
+    padding: 26px 0;
+    width: 33.3%;
+    text-align:end;
+    justify-content: end;
+    color: white;
+    font-weight: 900;
+}
+
+@media screen and (max-width:500px) {
+    .navbar a {
+    
+    display:flex;
+    }
+
+    .navbar li {
+        display:flex;
+    
+    }
+
+    .score li{
+        display:flex;
+    }
+}
