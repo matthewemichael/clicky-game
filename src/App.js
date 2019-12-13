@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Container from "./components/Container";
 import Navbar from "./components/Navbar";
 import Title from "./components/Title";
@@ -7,8 +7,7 @@ import Jumbotron from "./components/Jumbotron";
 import characters from "./characters.json";
 import './App.css';
 
-class App extends Component {
-  // Setting this.state.images to the images json array
+class App extends React.Component {
   state = {
     characters,
     count: 0,
@@ -17,7 +16,6 @@ class App extends Component {
     message: "Click on a character to start!"
   };
   
-
   shuffle = (array) => {
     array.sort(() => Math.random() - 0.5);
   }
@@ -46,7 +44,7 @@ class App extends Component {
             this.setState({ count: 0 });
             this.setState({ initialState: [0,0,0,0,0,0,0,0,0,0,0,0] });
             this.setState({
-              isPlaying: false,
+
               message: "Click on a character to start!"
             });
             return item;
